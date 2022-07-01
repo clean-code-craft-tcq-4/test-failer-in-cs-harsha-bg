@@ -8,15 +8,15 @@ namespace misaligned
         public static string[] minorColors = { "Blue", "Orange", "Green", "Brown", "Slate" };
         public static int printColorMap()
         {
-            int i = 0, j = 0;
-            for (i = 0; i < 5; i++)
+            int majorColorsIndex = 0, minorColorsIndex = 0;
+            for (majorColorsIndex = 0; majorColorsIndex < majorColors.Length; majorColorsIndex++)
             {
-                for (j = 0; j < 5; j++)
+                for (minorColorsIndex = 0; minorColorsIndex < minorColors.Length; minorColorsIndex++)
                 {
-                    Console.WriteLine("{0} | {1} | {2}", i * 5 + j+1, majorColors[i], minorColors[j]);
+                    Console.WriteLine("{0} | {1} | {2}", majorColorsIndex * 5 + minorColorsIndex+1, majorColors[majorColorsIndex], minorColors[minorColorsIndex]);
                 }
             }
-            return i * j;
+            return majorColorsIndex * minorColorsIndex;
         }
     }
 }
